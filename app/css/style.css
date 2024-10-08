@@ -1,0 +1,21 @@
+header {
+    height: 80px;
+    background-color: #06131F;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+img {
+    max-height: 100%;
+    width: auto;
+}
+
+main {
+    height: calc(100vh - 80px);
+    background-color: #1D2D3C;
+}
+
+.row>* {
+    margin: 3rem 0;
+}
