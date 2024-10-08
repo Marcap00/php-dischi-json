@@ -10,7 +10,7 @@
         integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=='
         crossorigin='anonymous' />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./app/css/style.css">
     <!-- Vue 3 -->
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
@@ -18,22 +18,22 @@
         integrity='sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=='
         crossorigin='anonymous'></script>
     <!-- Custom JS -->
-    <script defer src="./js/script.js"></script>
+    <script defer src="./app/js/script.js"></script>
 </head>
 
 <body>
     <div id="app">
         <header>
-            <img class="ms-5" src="./images/logo-small.svg" alt="Logo">
+            <img class="ms-5" src="./app/images/logo-small.svg" alt="Logo">
         </header>
         <main class="overflow-scroll">
             <div class="container">
                 <div class="row row-cols-3 gx-5">
                     <div v-for="(record, index) in recordsList" :key="index" class="col">
-                        <div class="card">
-                            <img :src="record.poster" class="card-img-top" :alt="record.title">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">{{ record.title }}</h5>
+                        <div class="card bg-card p-4">
+                            <img :src="record.poster" class="card-img-top mb-2" :alt="record.title">
+                            <div class="card-body text-center text-white">
+                                <h5 class="card-title fw-semibold">{{ record.title }}</h5>
                                 <p class="card-text">{{ record.author }}</p>
                                 <p>{{ record.year }}</p>
                             </div>

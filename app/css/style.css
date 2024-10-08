@@ -1,3 +1,9 @@
+/* Utilities */
+.bg-card {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
 /* General */
 header {
     height: 80px;
@@ -19,11 +25,14 @@ body {
 main {
     height: calc(100vh - 80px);
     background-color: #1D2D3C;
-
 }
 
 /* Layout */
 
 .row>* {
     margin: 3rem 0;
+}
+
+.card .card-body {
+    min-height: 170px;
 }
