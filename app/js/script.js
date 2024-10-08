@@ -4,6 +4,8 @@ createApp({
     data() {
         return {
             recordsList: [],
+            currentIndex: 0,
+            displayInfo: false
         }
     },
     methods: {
@@ -22,6 +24,15 @@ createApp({
                 .finally(function () {
                     console.log('Chiamata completata');
                 });
+        },
+        showInfo(index) {
+            this.currentIndex = index;
+            if (this.currentIndex === index) {
+                this.displayInfo = !this.displayInfo;
+            }
+            // this.displayInfo = !this.displayInfo;
+            // console.log(this.displayInfo);
+            console.log(this.currentIndex);
         }
     },
     created() {

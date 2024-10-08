@@ -33,6 +33,14 @@ main {
     margin: 3rem 0;
 }
 
+div.card {
+    cursor: pointer;
+}
+
 .card .card-body {
     min-height: 170px;
+}
+
+.card div.active {
+    display: block;
 }

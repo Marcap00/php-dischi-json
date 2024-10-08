@@ -30,13 +30,24 @@
             <div class="container">
                 <div class="row row-cols-3 gx-5">
                     <div v-for="(record, index) in recordsList" :key="index" class="col">
-                        <div class="card bg-card p-4">
-                            <img :src="record.poster" class="card-img-top mb-2" :alt="record.title">
-                            <div class="card-body text-center text-white">
-                                <h5 class="card-title fw-semibold">{{ record.title }}</h5>
-                                <p class="card-text">{{ record.author }}</p>
-                                <p>{{ record.year }}</p>
+                        <div @click="showInfo(index)" class="card bg-card p-4">
+
+                            <div v-if="!(displayInfo && currentIndex === index)">
+                                <img :src="record.poster" class="card-img-top mb-2" :alt="record.title">
+                                <div class="card-body text-center text-white">
+                                    <h5 class="card-title fw-semibold">{{ record.title }}</h5>
+                                    <p class="card-text">{{ record.author }}</p>
+                                    <p>{{ record.year }}</p>
+                                </div>
                             </div>
+
+                            <div v-else class="card-body text-white">
+                                <h5 class="card-title fw-semibold mb-4">Titolo: {{ record.title }}</h5>
+                                <p class="card-text">Autore: {{ record.author }}</p>
+                                <p>Anno di produzione: {{ record.year }}</p>
+                                <p>Genere: {{ record.genre }}</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
