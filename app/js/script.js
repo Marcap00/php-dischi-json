@@ -27,11 +27,9 @@ createApp({
         },
         showInfo(index) {
             this.currentIndex = index;
-            if (this.currentIndex === index) {
-                this.displayInfo = !this.displayInfo;
-            }
-            // this.displayInfo = !this.displayInfo;
-            // console.log(this.displayInfo);
+
+            this.displayInfo = !this.displayInfo;
+
             console.log(this.currentIndex);
         }
     },

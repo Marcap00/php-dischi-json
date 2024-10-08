@@ -44,3 +44,7 @@ div.card {
 .card div.active {
     display: block;
 }
+
+.fix-height {
+    height: 468px;
+}
