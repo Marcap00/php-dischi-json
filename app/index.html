@@ -26,66 +26,16 @@
         <header>
             <img class="ms-5" src="./images/logo-small.svg" alt="Logo">
         </header>
-        <main>
+        <main class="overflow-scroll">
             <div class="container">
                 <div class="row row-cols-3 gx-5">
-                    <div class="col">
+                    <div v-for="(record, index) in recordsList" :key="index" class="col">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img :src="record.poster" class="card-img-top" :alt="record.title">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Lorem</h5>
-                                <p class="card-text">Lorem</p>
-                                <p>1900</p>
+                                <h5 class="card-title">{{ record.title }}</h5>
+                                <p class="card-text">{{ record.author }}</p>
+                                <p>{{ record.year }}</p>
                             </div>
                         </div>
                     </div>

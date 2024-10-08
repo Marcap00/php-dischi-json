@@ -12,9 +12,14 @@ img {
     width: auto;
 }
 
+body {
+    overflow: hidden;
+}
+
 main {
     height: calc(100vh - 80px);
     background-color: #1D2D3C;
+
 }
 
 /* Layout */
